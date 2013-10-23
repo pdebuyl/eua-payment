@@ -1,3 +1,6 @@
 [submodule "plata_submodule"]
 	path = plata_submodule
 	url = git@github.com:matthiask/plata.git
+[submodule "pdfdocument_submodule"]
+	path = pdfdocument_submodule
+	url = git@github.com:matthiask/pdfdocument.git

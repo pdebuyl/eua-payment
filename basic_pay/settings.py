@@ -127,14 +127,19 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
+    'basic_pay',
+
+    # theme
+    "pinax_theme_bootstrap_account",
+    "pinax_theme_bootstrap",
+    "django_forms_bootstrap",
+
     'plata',
     'plata.contact',
     'plata.discount',
     'plata.payment',
     'plata.product',
     'plata.shop',
-
-    'basic_pay',
 
 )
 

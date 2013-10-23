@@ -1,7 +1,7 @@
 import os
 
 from django.conf.urls.defaults import include, patterns, url
-from django.contrib import admin
+from django.contrib import admin, auth
 from django.shortcuts import redirect
 
 from basic_pay.views import shop
@@ -21,6 +21,8 @@ urlpatterns = patterns('',
         name='plata_product_detail'),
 
     url(r'^reporting/', include('plata.reporting.urls')),
+
+    url(r"^account/", include("account.urls")),
 
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': os.path.join(os.path.dirname(__file__), 'media/')}),

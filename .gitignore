@@ -1,6 +1,6 @@
 _build
 *.pyc
-plata.db
+dev.db
 *~
 basic_pay/site_media
 basic_pay/static

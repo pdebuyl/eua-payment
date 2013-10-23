@@ -12,7 +12,7 @@ from plata.discount.models import Discount
 from plata.shop.views import Shop
 from plata.shop.models import Order
 
-from simple.models import Product
+from basic_pay.models import Product
 
 
 shop = Shop(Contact, Order, Discount)

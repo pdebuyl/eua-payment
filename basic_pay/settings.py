@@ -167,7 +167,7 @@ LOGGING = {
     }
 }
 
-PLATA_SHOP_PRODUCT = 'plata_simple.Product'
+PLATA_SHOP_PRODUCT = 'basic_pay.Product'
 CURRENCIES = ('EUR',)
 
 # local_settings.py can be used to override environment-specific settings

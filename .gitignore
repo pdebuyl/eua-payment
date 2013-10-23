@@ -1,0 +1,7 @@
+_build
+*.pyc
+plata.db
+*~
+basic_pay/site_media
+basic_pay/static
+basic_pay/local_settings.py

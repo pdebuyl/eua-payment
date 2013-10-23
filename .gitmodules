@@ -1,0 +1,3 @@
+[submodule "plata_submodule"]
+	path = plata_submodule
+	url = git@github.com:matthiask/plata.git

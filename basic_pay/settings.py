@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'basic_pay',
 
     # theme
+    "account",
     "pinax_theme_bootstrap_account",
     "pinax_theme_bootstrap",
     "django_forms_bootstrap",
@@ -174,6 +175,12 @@ LOGGING = {
 
 PLATA_SHOP_PRODUCT = 'basic_pay.Product'
 CURRENCIES = ('EUR',)
+
+# Set email backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Require email confirmation
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED=True
 
 # local_settings.py can be used to override environment-specific settings
 # like database and email that differ between development and production.

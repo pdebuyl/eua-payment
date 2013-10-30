@@ -1,12 +1,17 @@
 from django import forms
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
 from django.db.models import ObjectDoesNotExist
-from django.shortcuts import get_object_or_404, redirect, render_to_response
+from django.shortcuts import get_object_or_404, redirect, render_to_response, render
 from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.views.generic import  list_detail
 
+from pdfdocument.utils import pdf_response
+
+import plata
+import plata.reporting.order
 from plata.contact.models import Contact
 from plata.discount.models import Discount
 from plata.shop.views import Shop
@@ -57,4 +62,22 @@ def product_detail(request, object_id):
         }, context_instance=RequestContext(request))
 
 def home(request):
-    return render_to_response('home.html')
+    return render(request, 'home.html')
+
+@login_required
+def my_orders(request):
+    return render(request, 'orders.html')
+
+@login_required
+def receipt_pdf(request, order_id):
+    """
+    Returns the invoice PDF
+    """
+    order = get_object_or_404(plata.shop_instance().order_model, pk=order_id)
+
+    if order in request.user.orders.all():
+        pdf, response = pdf_response('invoice-%09d' % order.id)
+        plata.reporting.order.invoice_pdf(pdf, order)
+        return response
+    else:
+	raise Http404

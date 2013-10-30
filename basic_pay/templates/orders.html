@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+            <h4>Your orders</h4>
+            <table class="table table-condensed">
+                <thead>
+                    <th>#</th>
+                    <th>Items</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                </thead>
+                <tbody>
+                    {% for order in user.orders.all %}
+                        <tr>
+                            <td>{{ order.id }}</td>
+                            <td>
+                                {% for item in order.items.all %} {{ item.name }} <br /> {% endfor %}
+                            </td>
+                            <td>{{ order.get_status_display }}</td>
+                            <td><a href="/receipt/{{ order.id }}/">Receipt #{{ order.id }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+{% endblock %}

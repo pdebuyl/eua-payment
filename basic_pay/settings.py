@@ -176,6 +176,9 @@ LOGGING = {
 PLATA_SHOP_PRODUCT = 'basic_pay.Product'
 CURRENCIES = ('EUR',)
 
+#: Stationery for invoice and packing slip PDF generation
+PLATA_REPORTING_STATIONERY = 'basic_pay.ULB_elements.ULBStationery'
+
 # Set email backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

@@ -6,6 +6,7 @@
     {% if THEME_ACCOUNT_ADMIN_URL and user.is_staff %}
         <a href="{% url THEME_ACCOUNT_ADMIN_URL %}"><i class="icon-cog"></i> {% trans "Admin" %}</a>
     {% endif %}
+    <a href="{% url "my_orders" %}"><span>{% trans "My orders" %}</span></a>
     <a href="{% url "account_logout" %}"><span>{% trans "Log out" %}</span></a>
 {% else %}
     <a href="{% url "account_login" %}"><span>{% trans "Log in" %}</span></a>

@@ -8,8 +8,10 @@
     {% endif %}
     <a href="{% url "my_orders" %}"><span>{% trans "My orders" %}</span></a>
     <a href="{% url "account_logout" %}"><span>{% trans "Log out" %}</span></a>
+    <span id="navigationright">You are currently logged in as {{ user }}.</span>
 {% else %}
     <a href="{% url "account_login" %}"><span>{% trans "Log in" %}</span></a>
     <a href="{% url "account_signup" %}"><span>{% trans "Sign up" %}</span></a>
+    <span id="navigationright">You are not logged in.</span>
 {% endif %}
 

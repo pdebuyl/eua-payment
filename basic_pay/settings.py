@@ -173,6 +173,8 @@ LOGGING = {
     }
 }
 
+PLATA_PAYMENT_MODULES = [ 'plata.payment.modules.ogone.PaymentProcessor' ]
+
 PLATA_SHOP_PRODUCT = 'basic_pay.Product'
 CURRENCIES = ('EUR',)
 

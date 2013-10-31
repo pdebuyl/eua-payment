@@ -14,6 +14,11 @@ framework.
 
 """
 import os
+import sys
+sys.path.append("/srv/eua-payment/eua-payment")
+
+activate_this = '/srv/eua-payment/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "basic_pay.settings")
 

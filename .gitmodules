@@ -1,6 +1,6 @@
 [submodule "plata_submodule"]
 	path = plata_submodule
-	url = git@github.com:matthiask/plata.git
+	url = git@github.com:pdebuyl/plata.git
 [submodule "pdfdocument_submodule"]
 	path = pdfdocument_submodule
-	url = git@github.com:matthiask/pdfdocument.git
+	url = git@github.com:pdebuyl/pdfdocument.git

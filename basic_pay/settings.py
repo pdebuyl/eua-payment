@@ -182,7 +182,7 @@ CURRENCIES = ('EUR',)
 PLATA_REPORTING_STATIONERY = 'basic_pay.ULB_elements.ULBStationery'
 
 # Set email backend
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Require email confirmation
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED=True
